@@ -1,2 +1,2 @@
 # khount
-Count all object's keys
+Count all object's keys.
