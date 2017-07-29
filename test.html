@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>khount unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:numric</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./khount.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "khount unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				assert.equal( khount( { "name": "simple" } ), 1, "should have value 1" );
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-				assert.equal( khount( [ 1, 2, 3 ] ), 4, "should have value 4" );
-
-				assert.equal( khount( { } ), 0, "should have value 0" );
-
-				assert.equal( khount( ), 0, "should have value 0" );
-
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>
