@@ -1,17 +1,74 @@
-ok
 {
   "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
+    "suites": 5,
+    "tests": 4,
+    "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2017-07-29T21:00:05.749Z",
-    "end": "2017-07-29T21:00:05.749Z",
-    "duration": 0
+    "start": "2017-07-30T16:48:23.938Z",
+    "end": "2017-07-30T16:48:23.944Z",
+    "duration": 6
   },
-  "tests": [],
+  "tests": [
+    {
+      "title": "should have value 1",
+      "fullTitle": "khount \"khount( { \"name\": \"simple\" } )\" should have value 1",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 4",
+      "fullTitle": "khount \"khount( [ 1, 2, 3 ] )\" should have value 4",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 0",
+      "fullTitle": "khount `khount( { } )` should have value 0",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 0",
+      "fullTitle": "khount `khount( )` should have value 0",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
   "pending": [],
   "failures": [],
-  "passes": []
+  "passes": [
+    {
+      "title": "should have value 1",
+      "fullTitle": "khount \"khount( { \"name\": \"simple\" } )\" should have value 1",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 4",
+      "fullTitle": "khount \"khount( [ 1, 2, 3 ] )\" should have value 4",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 0",
+      "fullTitle": "khount `khount( { } )` should have value 0",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 0",
+      "fullTitle": "khount `khount( )` should have value 0",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
 }

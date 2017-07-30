@@ -1,12 +1,156 @@
+"use strict";
+
+/*;
+	@test-license:
+		The MIT License (MIT)
+		@mit-license
+
+		Copyright (@c) 2017 Richeve Siodina Bebedor
+		@email: richeve.bebedor@gmail.com
+
+		Permission is hereby granted, free of charge, to any person obtaining a copy
+		of this software and associated documentation files (the "Software"), to deal
+		in the Software without restriction, including without limitation the rights
+		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+		copies of the Software, and to permit persons to whom the Software is
+		furnished to do so, subject to the following conditions:
+
+		The above copyright notice and this permission notice shall be included in all
+		copies or substantial portions of the Software.
+
+		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+		SOFTWARE.
+	@end-test-license
+
+	@test-configuration:
+		{
+			"package": "khount",
+			"path": "khount/test.module.js",
+			"file": "test.module.js",
+			"module": "test",
+			"author": "Richeve S. Bebedor",
+			"eMail": "richeve.bebedor@gmail.com",
+			"contributors": [
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+				"Vinse Vinalon <vinsevinalon@gmail.com>"
+			],
+			"repository": "https://github.com/volkovasystems/khount.git"
+		}
+	@end-test-configuration
+
+	@test-documentation:
+
+	@end-test-documentation
+
+	@include:
+		{
+			"assert": "should",
+			"khount": "khount"
+		}
+	@end-include
+*/
+
 const assert = require( "assert" );
+
+//: @server:
 const khount = require( "./khount.js" );
+//: @end-server
 
-assert.equal( khount( { "name": "simple" } ), 1, "should have value 1" );
+//: @client:
+const khount = require( "./khount.support.js" );
+//: @end-client
 
-assert.equal( khount( [ 1, 2, 3 ] ), 4, "should have value 4" );
+//: @bridge:
+const path = require( "path" );
+//: @end-bridge
 
-assert.equal( khount( { } ), 0, "should have value 0" );
+//: @server:
 
-assert.equal( khount( ), 0, "should have value 0" );
+describe( "khount", ( ) => {
+	
+	describe( '"khount( { "name": "simple" } )"', ( ) => {
+		it( "should have value 1", ( ) => {
 
-console.log( "ok" );
+			assert.equal( khount( { "name": "simple" } ), 1);
+
+		} );
+	} );
+
+	describe( `"khount( [ 1, 2, 3 ] )"`, ( ) => {
+	it( "should have value 4", ( ) => {
+
+			assert.equal( khount( [ 1, 2, 3 ] ), 4 );
+
+		} );
+	} );
+	
+	describe( "`khount( { } )`", ( ) => {
+	it( "should have value 0", ( ) => {
+
+			assert.equal( khount( { } ), 0 );
+
+		} );
+	} );
+
+	describe( "`khount( )`", ( ) => {
+	it( "should have value 0", ( ) => {
+
+			assert.equal( khount( ), 0 );
+
+		} );
+	} );
+} );
+
+
+//: @end-server
+
+//: @client: 
+describe( "khount", ( ) => {
+	
+	describe( '"khount( { "name": "simple" } )"', ( ) => {
+		it( "should have value 1", ( ) => {
+
+			assert.equal( khount( { "name": "simple" } ), 1);
+
+		} );
+	} );
+
+	describe( `"khount( [ 1, 2, 3 ] )"`, ( ) => {
+	it( "should have value 4", ( ) => {
+
+			assert.equal( khount( [ 1, 2, 3 ] ), 4 );
+
+		} );
+	} );
+	
+	describe( "`khount( { } )`", ( ) => {
+	it( "should have value 0", ( ) => {
+
+			assert.equal( khount( { } ), 0 );
+
+		} );
+	} );
+
+	describe( "`khount( )`", ( ) => {
+	it( "should have value 0", ( ) => {
+
+			assert.equal( khount( ), 0 );
+
+		} );
+	} );
+} );
+//: @end-client
+
+
+//: @bridge:
+
+
+
+//: @end-bridge
+
+
