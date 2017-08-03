@@ -72,9 +72,9 @@ const path = require( "path" );
 //: @server:
 
 describe( "khount", ( ) => {
-	
+
 	describe( '"khount( { "name": "simple" } )"', ( ) => {
-		it( "should have value 1", ( ) => {
+		it( "should be equal to 1", ( ) => {
 
 			assert.equal( khount( { "name": "simple" } ), 1);
 
@@ -82,15 +82,15 @@ describe( "khount", ( ) => {
 	} );
 
 	describe( `"khount( [ 1, 2, 3 ] )"`, ( ) => {
-	it( "should have value 4", ( ) => {
+	it( "should be equal to 4", ( ) => {
 
 			assert.equal( khount( [ 1, 2, 3 ] ), 4 );
 
 		} );
 	} );
-	
+
 	describe( "`khount( { } )`", ( ) => {
-	it( "should have value 0", ( ) => {
+	it( "should be equal to 0", ( ) => {
 
 			assert.equal( khount( { } ), 0 );
 
@@ -98,7 +98,7 @@ describe( "khount", ( ) => {
 	} );
 
 	describe( "`khount( )`", ( ) => {
-	it( "should have value 0", ( ) => {
+	it( "should be equal to 0", ( ) => {
 
 			assert.equal( khount( ), 0 );
 
@@ -109,11 +109,11 @@ describe( "khount", ( ) => {
 
 //: @end-server
 
-//: @client: 
+//: @client:
 describe( "khount", ( ) => {
-	
+
 	describe( '"khount( { "name": "simple" } )"', ( ) => {
-		it( "should have value 1", ( ) => {
+		it( "should be equal to 1", ( ) => {
 
 			assert.equal( khount( { "name": "simple" } ), 1);
 
@@ -121,15 +121,15 @@ describe( "khount", ( ) => {
 	} );
 
 	describe( `"khount( [ 1, 2, 3 ] )"`, ( ) => {
-	it( "should have value 4", ( ) => {
+	it( "should be equal to 4", ( ) => {
 
 			assert.equal( khount( [ 1, 2, 3 ] ), 4 );
 
 		} );
 	} );
-	
+
 	describe( "`khount( { } )`", ( ) => {
-	it( "should have value 0", ( ) => {
+	it( "should be equal to 0", ( ) => {
 
 			assert.equal( khount( { } ), 0 );
 
@@ -137,7 +137,7 @@ describe( "khount", ( ) => {
 	} );
 
 	describe( "`khount( )`", ( ) => {
-	it( "should have value 0", ( ) => {
+	it( "should be equal to 0", ( ) => {
 
 			assert.equal( khount( ), 0 );
 
@@ -149,8 +149,75 @@ describe( "khount", ( ) => {
 
 //: @bridge:
 
+describe( "khount", ( ) => {
 
+	describe( '"khount( { "name": "simple" } )"', ( ) => {
+		it( "should be equal to 1", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return khount( { "name": "simple" } );
+				}
+
+			).value;
+
+			assert.equal( result, 1 );
+
+		} );
+	} );
+
+
+	describe( `"khount( [ 1, 2, 3 ] )"`, ( ) => {
+		it( "should be equal to 4", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return khount( [ 1, 2, 3 ] );
+				}
+
+			).value;
+
+			assert.equal( result, 4 );
+
+		} );
+	} );
+
+
+	describe( "`khount( { } )`", ( ) => {
+		it( "should be equal to 0", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return khount( { } );
+				}
+
+			).value;
+
+			assert.equal( result, 0 );
+
+		} );
+	} );
+
+
+	describe( "`khount( )`", ( ) => {
+		it( "should be equal to 0", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return khount( );
+				}
+
+			).value;
+
+			assert.equal( result, 0 );
+
+		} );
+	} );
+
+} );
 
 //: @end-bridge
-
-
