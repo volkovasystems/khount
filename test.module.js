@@ -151,6 +151,8 @@ describe( "khount", ( ) => {
 
 describe( "khount", ( ) => {
 
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+	
 	describe( '"khount( { "name": "simple" } )"', ( ) => {
 		it( "should be equal to 1", ( ) => {
 
