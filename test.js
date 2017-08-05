@@ -55,7 +55,7 @@
 	@end-include
 */
 
-const assert = require( "assert" );
+const assert = require( "should" );
 
 //: @server:
 const khount = require( "./khount.js" );
@@ -68,33 +68,36 @@ const khount = require( "./khount.js" );
 //: @server:
 
 describe( "khount", ( ) => {
-	
-	describe( '"khount( { "name": "simple" } )"', ( ) => {
-		it( "should have value 1", ( ) => {
+
+	describe( "`khount( { 'name': 'simple' } )`", ( ) => {
+		it( "should be equal to 1", ( ) => {
 
 			assert.equal( khount( { "name": "simple" } ), 1);
 
 		} );
 	} );
 
-	describe( `"khount( [ 1, 2, 3 ] )"`, ( ) => {
-	it( "should have value 4", ( ) => {
+
+	describe( "`khount( [ 1, 2, 3 ] )`", ( ) => {
+		it( "should be equal to 4", ( ) => {
 
 			assert.equal( khount( [ 1, 2, 3 ] ), 4 );
 
 		} );
 	} );
-	
+
+
 	describe( "`khount( { } )`", ( ) => {
-	it( "should have value 0", ( ) => {
+		it( "should be equal to 0", ( ) => {
 
 			assert.equal( khount( { } ), 0 );
 
 		} );
 	} );
 
+
 	describe( "`khount( )`", ( ) => {
-	it( "should have value 0", ( ) => {
+		it( "should be equal to 0", ( ) => {
 
 			assert.equal( khount( ), 0 );
 
@@ -109,21 +112,3 @@ describe( "khount", ( ) => {
 
 
 
-
-
-
-
-
-
-// const assert = require( "assert" );
-// const khount = require( "./khount.js" );
-
-// assert.equal( khount( { "name": "simple" } ), 1, "should have value 1" );
-
-// assert.equal( khount( [ 1, 2, 3 ] ), 4, "should have value 4" );
-
-// assert.equal( khount( { } ), 0, "should have value 0" );
-
-// assert.equal( khount( ), 0, "should have value 0" );
-
-// console.log( "ok" );

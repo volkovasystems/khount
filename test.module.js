@@ -55,7 +55,7 @@
 	@end-include
 */
 
-const assert = require( "assert" );
+const assert = require( "should" );
 
 //: @server:
 const khount = require( "./khount.js" );
@@ -73,7 +73,7 @@ const path = require( "path" );
 
 describe( "khount", ( ) => {
 
-	describe( '"khount( { "name": "simple" } )"', ( ) => {
+	describe( "`khount( { 'name': 'simple' } )`", ( ) => {
 		it( "should be equal to 1", ( ) => {
 
 			assert.equal( khount( { "name": "simple" } ), 1);
@@ -81,24 +81,27 @@ describe( "khount", ( ) => {
 		} );
 	} );
 
-	describe( `"khount( [ 1, 2, 3 ] )"`, ( ) => {
-	it( "should be equal to 4", ( ) => {
+
+	describe( "`khount( [ 1, 2, 3 ] )`", ( ) => {
+		it( "should be equal to 4", ( ) => {
 
 			assert.equal( khount( [ 1, 2, 3 ] ), 4 );
 
 		} );
 	} );
 
+
 	describe( "`khount( { } )`", ( ) => {
-	it( "should be equal to 0", ( ) => {
+		it( "should be equal to 0", ( ) => {
 
 			assert.equal( khount( { } ), 0 );
 
 		} );
 	} );
 
+
 	describe( "`khount( )`", ( ) => {
-	it( "should be equal to 0", ( ) => {
+		it( "should be equal to 0", ( ) => {
 
 			assert.equal( khount( ), 0 );
 
@@ -112,7 +115,7 @@ describe( "khount", ( ) => {
 //: @client:
 describe( "khount", ( ) => {
 
-	describe( '"khount( { "name": "simple" } )"', ( ) => {
+	describe( "`khount( { 'name': 'simple' } )`", ( ) => {
 		it( "should be equal to 1", ( ) => {
 
 			assert.equal( khount( { "name": "simple" } ), 1);
@@ -120,24 +123,27 @@ describe( "khount", ( ) => {
 		} );
 	} );
 
-	describe( `"khount( [ 1, 2, 3 ] )"`, ( ) => {
-	it( "should be equal to 4", ( ) => {
+	
+	describe( "`khount( [ 1, 2, 3 ] )`", ( ) => {
+		it( "should be equal to 4", ( ) => {
 
 			assert.equal( khount( [ 1, 2, 3 ] ), 4 );
 
 		} );
 	} );
 
+
 	describe( "`khount( { } )`", ( ) => {
-	it( "should be equal to 0", ( ) => {
+		it( "should be equal to 0", ( ) => {
 
 			assert.equal( khount( { } ), 0 );
 
 		} );
 	} );
 
+
 	describe( "`khount( )`", ( ) => {
-	it( "should be equal to 0", ( ) => {
+		it( "should be equal to 0", ( ) => {
 
 			assert.equal( khount( ), 0 );
 
