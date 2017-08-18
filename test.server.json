@@ -5,9 +5,9 @@
     "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2017-08-05T12:18:48.809Z",
-    "end": "2017-08-05T12:18:48.814Z",
-    "duration": 5
+    "start": "2017-08-18T07:23:13.263Z",
+    "end": "2017-08-18T07:23:13.274Z",
+    "duration": 11
   },
   "tests": [
     {
@@ -20,7 +20,7 @@
     {
       "title": "should be equal to 4",
       "fullTitle": "khount `khount( [ 1, 2, 3 ] )` should be equal to 4",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -52,7 +52,7 @@
     {
       "title": "should be equal to 4",
       "fullTitle": "khount `khount( [ 1, 2, 3 ] )` should be equal to 4",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
