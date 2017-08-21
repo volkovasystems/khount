@@ -76,7 +76,7 @@ describe( "khount", ( ) => {
 	describe( "`khount( { 'name': 'simple' } )`", ( ) => {
 		it( "should be equal to 1", ( ) => {
 
-			assert.equal( khount( { "name": "simple" } ), 1);
+			assert.equal( khount( { "name": "simple" } ), 1 );
 
 		} );
 	} );
@@ -118,12 +118,12 @@ describe( "khount", ( ) => {
 	describe( "`khount( { 'name': 'simple' } )`", ( ) => {
 		it( "should be equal to 1", ( ) => {
 
-			assert.equal( khount( { "name": "simple" } ), 1);
+			assert.equal( khount( { "name": "simple" } ), 1 );
 
 		} );
 	} );
 
-	
+
 	describe( "`khount( [ 1, 2, 3 ] )`", ( ) => {
 		it( "should be equal to 4", ( ) => {
 
