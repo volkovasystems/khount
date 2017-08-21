@@ -1,74 +1,74 @@
 {
-  "stats": {
-    "suites": 5,
-    "tests": 4,
-    "passes": 4,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-18T07:23:13.263Z",
-    "end": "2017-08-18T07:23:13.274Z",
-    "duration": 11
-  },
-  "tests": [
-    {
-      "title": "should be equal to 1",
-      "fullTitle": "khount `khount( { 'name': 'simple' } )` should be equal to 1",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to 4",
-      "fullTitle": "khount `khount( [ 1, 2, 3 ] )` should be equal to 4",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to 0",
-      "fullTitle": "khount `khount( { } )` should be equal to 0",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to 0",
-      "fullTitle": "khount `khount( )` should be equal to 0",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ],
-  "pending": [],
-  "failures": [],
-  "passes": [
-    {
-      "title": "should be equal to 1",
-      "fullTitle": "khount `khount( { 'name': 'simple' } )` should be equal to 1",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to 4",
-      "fullTitle": "khount `khount( [ 1, 2, 3 ] )` should be equal to 4",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to 0",
-      "fullTitle": "khount `khount( { } )` should be equal to 0",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to 0",
-      "fullTitle": "khount `khount( )` should be equal to 0",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ]
+	"stats": {
+		"suites": 5,
+		"tests": 4,
+		"passes": 4,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-08-21T10:51:09.168Z",
+		"end": "2017-08-21T10:51:09.173Z",
+		"duration": 5
+	},
+	"tests": [
+		{
+			"title": "should be equal to 1",
+			"fullTitle": "khount `khount( { 'name': 'simple' } )` should be equal to 1",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 4",
+			"fullTitle": "khount `khount( [ 1, 2, 3 ] )` should be equal to 4",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 0",
+			"fullTitle": "khount `khount( { } )` should be equal to 0",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 0",
+			"fullTitle": "khount `khount( )` should be equal to 0",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to 1",
+			"fullTitle": "khount `khount( { 'name': 'simple' } )` should be equal to 1",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 4",
+			"fullTitle": "khount `khount( [ 1, 2, 3 ] )` should be equal to 4",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 0",
+			"fullTitle": "khount `khount( { } )` should be equal to 0",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 0",
+			"fullTitle": "khount `khount( )` should be equal to 0",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }
